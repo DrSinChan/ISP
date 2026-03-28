@@ -17,8 +17,7 @@ def opd_data_valid(text: str):
     keyword3=re.search(r"Patient\s*Name\s*:", text, flags=re.IGNORECASE)
     keyword4=re.search(r"\d+\s*Years\s*/\s*(Male|Female)", text, flags=re.IGNORECASE)
     keyword5=re.search(r"Checkin\s*No\s*:\s*\S+", text, flags=re.IGNORECASE)
-    #returns value true if all the keywords above are identified in the string
-    return bool(keyword1 and keyword2 and keyword3 and keyword4 and keyword5)
+    return bool(keyword1 and keyword2 and keyword3 and keyword4 and keyword5)     #returns value true if all the keywords above are identified in the string
 
 #start of main program
 while True:
