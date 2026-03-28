@@ -11,13 +11,13 @@ def normalize(text:str):
     return text.strip()
 
 #defining function to identify if the correct data is copied from HIS or not
-def opd_data_valid(text: str):
+def opd_data_valid(text:str):
     keyword1=re.search(r"UHID\s*:\s*\S+", text, flags=re.IGNORECASE)
     keyword2=re.search(r"IP\s*NO\s*:\s*\d+",text, flags=re.IGNORECASE)
     keyword3=re.search(r"Patient\s*Name\s*:", text, flags=re.IGNORECASE)
     keyword4=re.search(r"\d+\s*Years\s*/\s*(Male|Female)", text, flags=re.IGNORECASE)
     keyword5=re.search(r"Checkin\s*No\s*:\s*\S+", text, flags=re.IGNORECASE)
-    return bool(keyword1 and keyword2 and keyword3 and keyword4 and keyword5)     #returns value true if all the keywords above are identified in the string
+    return bool(keyword1 and keyword2 and keyword3 and keyword4 and keyword5)
 
 #start of main program
 while True:
